@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	. "github.com/golangast/resumezach/internal/routes"
+	"github.com/golangast/resumezach/src/routes"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
@@ -52,7 +52,7 @@ func main() {
 		AllowMethods: []string{http.MethodGet, http.MethodHead, http.MethodPut, http.MethodPatch, http.MethodPost, http.MethodDelete},
 	}))
 
-	Routes(e)
+	routes.Routes(e)
 
 	// Route
 	e.Logger.SetLevel(log.ERROR)
