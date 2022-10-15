@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/golangast/resumezach/src/handler/get/home"
-	"github.com/labstack/echo"
+	home "github.com/golangast/resumezach/src/handler/get/home"
+	"github.com/labstack/echo/v4"
 )
 
 func Routes(e *echo.Echo) {

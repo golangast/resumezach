@@ -9,7 +9,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/golangast/resumezach/src/routes"
+	routes "github.com/golangast/resumezach/src/routes"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
@@ -71,7 +71,7 @@ func main() {
 		Level: 5,
 	}))
 	e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(30)))
-	e.Static("/static", "static")
+	e.Static("/public", "public")
 	e.Logger.Fatal(e.Start(":5002"))
 }
 func GetAllFilePathsInDirectory(dirpath string) ([]string, error) {
